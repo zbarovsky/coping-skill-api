@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='stylesheet/style.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <title>Coping Skills API</title>
 </head>
 <body>
-    <h1>Coping Skill API</h1>
-    
+    <div class="container">
+        <div class="title">
+            <h1>Welcome to the Coping Skills API</h1>
+        </div>
+        <div>
+            <p>This relatively bare bones API lets you querery a list of 100 predetermined Coping Skills</p> 
+        </div>
+        <div class="routes">
+            <div>
+                <h2>Routes</h2>
+            </div>
+            <div>
+               <p>As it currently stands, there are two RESTful routes you can utilize</p> 
+            </div>
+            <div>
+                <ul>
+                    <li>1: /api/get_all will return you all current coping skills in the list</li>
+                    <li>2: /api/:id will return you a specific coping skill from 0-99</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Disclaimer: I did not create this list myself, I web scraped this list from <a rel="noopener" target="_blank" href="https://www.thepathway2success.com/100-coping-strategies-for-anger-anxiety-and-more/">this website here</a></p>
+        </div>        
+    </div>
 </body>
+<footer>
+    <div>
+        <p>Created by Zack Barovsky</p>
+    </div>
+</footer>
 </html>
