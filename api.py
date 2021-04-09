@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, jsonify
 from skills import coping_skills
 
 app = Flask(__name__)
@@ -11,12 +11,12 @@ def index():
 # show all coping skills
 @app.route('/api/get_all', methods=['GET'])
 def get_all():
-    pass
+    return jsonify(coping_skills)
 
 # get coping skill by id passed from frontend
 @app.route('/api/<int:id>', methods=['GET'])
 def get_skill(id):
-    pass
+    return jsonify(coping_skills[id])
 
 if __name__ == '__main__':
     app.run(debug=True)
