@@ -1,7 +1,9 @@
 from flask import Flask, render_template, url_for, request, redirect, jsonify
+from flask_cors import CORS
 from skills import coping_skills
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # landing page for API
 @app.route('/', methods=['GET'])
